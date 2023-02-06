@@ -2,10 +2,10 @@
   <h1>{{ msg }}</h1>
 
 <!-- My custom code -->
-<button id="duplicate" class="outsideBtn">Duplicate</button>
-<button id="bg" class="outsideBtn">Background</button>
-<button id="header" class="outsideBtn" v-on:click="msg = 'Something Else'">Heading</button>
-<button id="delete" class="outsideBtn">Delete</button>
+<button id="duplicate" class="outsideBtn" v-on:click="duplicate">Duplicate</button>
+<button id="bg" class="outsideBtn" v-on:click="background">Background</button>
+<button id="header" class="outsideBtn" v-on:click="heading">Heading</button>
+<button id="delete" class="outsideBtn" v-on:click="delete">Delete</button>
 
 <div class="card">
   <h1 class="title">Chad of Cyber IST</h1>
@@ -48,8 +48,45 @@ const state = reactive({ count: 0 })
 </script>
 
 <script>
-methods: {
-  
+
+export default {
+  methods: {
+    duplicate() {
+      const cloneCard = document.querySelector(".card").cloneNode(true);
+      document.body.appendChild(cloneCard);
+      console.log(cloneCard);    
+    },
+
+    background() {
+      document.querySelectorAll(".card").forEach((item) => {
+        if(!item.classList.contains("basic")){
+          item.classList.add("basic");
+          console.log(item);
+        }
+        else{
+          item.classList.remove("basic");
+          console.log(item);
+        }
+      });
+    },
+
+    heading() {
+      if(document.querySelector(".title").innerHTML=="something else"){
+        document.querySelector(".title").innerHTML="Chad of Cyber IST";
+      }
+      else{
+        document.querySelector(".title").innerHTML="something else";
+      }
+    },
+    
+    //Kinda borked rn
+    delete(){
+      const card = document.querySelectorAll(".card");
+      const last = card[card.length-1];
+      last.remove();
+      console.log(last);
+    }
+  }
 }
 </script>
 
