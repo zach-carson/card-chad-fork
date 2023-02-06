@@ -7,7 +7,7 @@
 <button class="outsideBtn" v-on:click="heading">Heading</button>
 <button class="outsideBtn" v-on:click="deleter">Delete</button>
 
-<div class="card">
+<div class="card" v-on:mouseover="hoover">
   <h1 class="title">Chad of Cyber IST</h1>
 
   <img class="giaImg" src="https://media.discordapp.net/attachments/963095262363017246/1020131830323744788/unknown.png?width=468&height=468" alt="Professor Giacobe">
@@ -51,6 +51,19 @@ const state = reactive({ count: 0 })
 
 export default {
   methods: {
+    hoover() {
+      document.querySelectorAll(".card").forEach((item) => {
+        if(!item.classList.contains("hoverCard")){
+          item.classList.add("hoverCard");
+          console.log(item);
+        }
+        else{
+          item.classList.remove("hoverCard");
+          console.log(item);
+        }
+      });
+    },
+    
     duplicate() {
       const cloneCard = document.querySelector(".card").cloneNode(true);
       document.body.appendChild(cloneCard);
