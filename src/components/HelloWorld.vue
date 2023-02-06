@@ -2,10 +2,10 @@
   <h1>{{ msg }}</h1>
 
 <!-- My custom code -->
-<button id="duplicate" class="outsideBtn" v-on:click="duplicate">Duplicate</button>
-<button id="bg" class="outsideBtn" v-on:click="background">Background</button>
-<button id="header" class="outsideBtn" v-on:click="heading">Heading</button>
-<button id="delete" class="outsideBtn" v-on:click="delete">Delete</button>
+<button class="outsideBtn" v-on:click="duplicate">Duplicate</button>
+<button class="outsideBtn" v-on:click="background">Background</button>
+<button class="outsideBtn" v-on:click="heading">Heading</button>
+<button class="outsideBtn" v-on:click="deleteBtn">Delete</button>
 
 <div class="card">
   <h1 class="title">Chad of Cyber IST</h1>
@@ -82,11 +82,9 @@ export default {
     },
 
     //Kinda borked rn
-    delete(){
-      const card = document.querySelectorAll(".card");
-      const last = card[card.length-1];
-      last.remove();
-      console.log(last);
+    deleteBtn(){
+      document.querySelector(".card:last-child").remove();
+      console.log(card);
     }
   }
 }
