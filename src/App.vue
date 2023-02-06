@@ -25,7 +25,8 @@ import HelloWorld from './components/HelloWorld.vue'
   border: 3px solid #041E42;
   padding: 8px;
   width: 400px;
-  display: inline-block;
+  display: block;
+  margin: auto;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 8px 24px #999;
@@ -104,7 +105,7 @@ import HelloWorld from './components/HelloWorld.vue'
   box-shadow: 0px 10px 24px #999;
   border: 1px solid #041E42;
   margin-right: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   display: inline-block;
 }
 
