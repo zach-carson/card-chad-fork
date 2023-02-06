@@ -59,7 +59,7 @@ import HelloWorld from './components/HelloWorld.vue'
   height: 32px;
   box-shadow: 0px 10px 24px #999;
   border: 1px solid #041E42;
-  visibility: hidden;
+  visibility: visible;
   padding-top: 10px;
   margin-right: 32px;
 }
@@ -105,7 +105,7 @@ import HelloWorld from './components/HelloWorld.vue'
   border: 1px solid #041E42;
   margin-right: 32px;
   margin-bottom: 10px;
-  display: none;
+  display: inline-block;
 }
 
 .outsideBtn:hover{
