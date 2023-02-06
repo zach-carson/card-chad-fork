@@ -4,7 +4,7 @@
 <!-- My custom code -->
 <button id="duplicate" class="outsideBtn">Duplicate</button>
 <button id="bg" class="outsideBtn">Background</button>
-<button id="header" class="outsideBtn">Heading</button>
+<button id="header" class="outsideBtn" v-on:click="msg = 'Something Else'">Heading</button>
 <button id="delete" class="outsideBtn">Delete</button>
 
 <div class="card">
@@ -45,6 +45,12 @@ defineProps({
 })
 
 const state = reactive({ count: 0 })
+</script>
+
+<script>
+methods: {
+  
+}
 </script>
 
 <style scoped>
