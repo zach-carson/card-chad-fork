@@ -133,32 +133,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
 input:checked + label + .description { display:none; }
 
-@media only screen and (min-width: 500px) and (max-width: 800px){
-  .haxbtn{
-    visibility: visible;
- }
-  .outsideBtn{
-    display: inline-block;
-  }
-}
 
-@media screen and (max-width: 500px){
-  .card{
-    max-width: 75%;
-  }
-  .textbox{
-    margin-top: 110%;
-    margin-left: auto;
-  }
-  .giaImg{
-    width: 100%;
-  }
-  .title{
-    font-size: 150%;
-  }
-  .pScale{
-    font-size: 150%;
-  }
-}
 
 </style>
