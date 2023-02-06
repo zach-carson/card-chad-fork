@@ -5,7 +5,7 @@
 <button class="outsideBtn" v-on:click="duplicate">Duplicate</button>
 <button class="outsideBtn" v-on:click="background">Background</button>
 <button class="outsideBtn" v-on:click="heading">Heading</button>
-<button class="outsideBtn" v-on:click="deleteBtn">Delete</button>
+<button class="outsideBtn" v-on:click="deleter">Delete</button>
 
 <div class="card">
   <h1 class="title">Chad of Cyber IST</h1>
@@ -82,7 +82,7 @@ export default {
     },
 
     //Kinda borked rn
-    deleteBtn(){
+    deleter(){
       document.querySelector(".card:last-child").remove();
       console.log(card);
     }
