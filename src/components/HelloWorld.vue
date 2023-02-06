@@ -71,14 +71,16 @@ export default {
     },
 
     heading() {
-      if(document.querySelector(".title").innerHTML=="something else"){
-        document.querySelector(".title").innerHTML="Chad of Cyber IST";
-      }
-      else{
-        document.querySelector(".title").innerHTML="something else";
-      }
+      document.querySelectorAll(".title").forEach((item) => {   
+        if(item.innerHTML=="something else"){
+          item.innerHTML="Chad of Cyber IST";
+        }
+        else{
+          item.innerHTML="something else";
+        }
+      });
     },
-    
+
     //Kinda borked rn
     delete(){
       const card = document.querySelectorAll(".card");
