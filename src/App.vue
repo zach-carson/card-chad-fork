@@ -11,125 +11,72 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
-.card{
-  border-radius: 24px;
-  border: 3px solid #041E42;
-  padding: 8px;
+.card
+{
+  background-color: grey;
+  border: solid black;
   width: 400px;
-  display: block;
+  display: inline-flex;
+}
+
+.btn { 
+  border: 2px solid blue;
+  text-transform: uppercase;
+  padding: 2px 2px;
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
   margin: auto;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 8px 24px #999;
-  background-color: lightgrey;
+  display: flex;
+  display: center;
+}
+
+.title-header
+{
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.textbox{
-  font-size: 15px;
-  margin-left: 112px;
-  text-align: right;
-  border-radius: 24px;
-}
-
-.description{
-  text-shadow: -1px 1px 2px #FFFFFF,
-				  1px 1px 2px #FFFFFF,
-				  1px -1px 0 #FFFFFF,
-				  -1px -1px 0 #FFFFFF;
-}
-
-.haxbtn{
-  display:inline-block;
+.desc
+{
   text-align: center;
-  color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 32px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  visibility: visible;
-  padding-top: 10px;
-  margin-right: 32px;
+  display: none;
 }
 
-.haxbtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+
+@media screen and (min-width: 500px) and (max-width: 800px)
+{
+  .btn
+  {
+    display: none;
+  }
 }
 
-.haxbtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+@media screen and (max-width: 500px)
+{
+  
+  .card
+  {
+    scale: 0.7;
+  }
+  
+  .img
+  {
+    scale: 0.6;
+  }
+ 
 }
 
-.title{
-  color: white;
-  font-size: 24px;
-  text-shadow: -1px 1px 2px #000,
-				  1px 1px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
+.img {
+  width: 400px;
 }
 
-.giaImg{
-  width: 200px;
-  border-radius: 24px;
-  box-shadow: 0px 10px 24px #999;
-  float: left;
+.duplicate:hover {
+  background-color: yellow;
 }
 
-.outsideBtn{
-  color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 50px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  margin-right: 32px;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-
-.outsideBtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
-}
-
-.outsideBtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
-}
-
-.basic{
-  background-color: hotpink;
-}
-
-.hoverCard{
-  border: 3px solid purple;
-  box-shadow: 0px 8px 24px yellow;
+.duplicate:focus {
+  background-color: yellow;
 }
 
 input:checked + label + .description { display:none; }
